@@ -1,0 +1,59 @@
+@use "../../assets/styles/mixins" as mixin;
+
+.header {
+  position: relative;
+  padding: 10px 30px;
+  height: 100px;
+  width: 100%;
+  justify-content: space-between;
+  background-color: black;
+  color: var(--primary);
+  border-bottom: 1px solid var(--primary);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+
+  @include mixin.xs {
+    justify-content: space-around;
+  }
+
+  .logo {
+    display: block;
+    background: center / contain no-repeat url(../../assets/img/Logo.png);
+    width: 400px;
+    height: 40px;
+    padding-bottom: 15px;
+
+    @include mixin.xs {
+      width: 100px;
+      height: 60px;
+      padding: 0;
+      background: center / contain no-repeat url(../../assets/img/icon.png);
+    }
+  }
+
+  a {
+    font-size: 28px;
+    font-weight: normal;
+  }
+
+  .contact {
+    position: relative;
+    display: inline-block;
+    color: white;
+    padding-top: 10px;
+  }
+
+  .contact::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 5px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+
+  .contact:hover::after {
+    width: 100%;
+  }
+}

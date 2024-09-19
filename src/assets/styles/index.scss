@@ -1,0 +1,18 @@
+@use "./variables";
+@use "./base";
+@use "./flex";
+@use "./utils";
+@use "./debug";
+@use "./themes";
+
+@font-face {
+  font-family: "AlexBrush";
+  src: local("AlexBrush-Regular"),
+    url("../../fonts/AlexBrush-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DancingScript";
+  src: local("DancingScript-Regular"),
+    url("../../fonts/DancingScript-VariableFont_wght.ttf") format("truetype");
+}

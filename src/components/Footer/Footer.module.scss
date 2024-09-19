@@ -1,0 +1,52 @@
+@use "../../assets/styles/mixins" as mixin;
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 100px;
+  background-color: var(--secondary);
+  color: white;
+  width: 100%;
+  font-size: 28px;
+  height: 100px;
+  font-family: var(--font-family-2);
+  border-top: 1px solid var(--primary);
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.5);
+
+  @include mixin.sm-lt {
+    font-size: 24px;
+  }
+
+  @include mixin.xs {
+    flex-direction: column;
+    padding: 15px 0px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .ml {
+    position: relative;
+    display: inline-block;
+    color: white;
+  }
+
+  /* Le soulignement initial est caché */
+  .ml::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 5px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+
+  /* Au survol, on étend la ligne sous le texte */
+  .ml:hover::after {
+    width: 100%;
+  }
+}

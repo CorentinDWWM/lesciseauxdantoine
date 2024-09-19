@@ -1,0 +1,91 @@
+@use "../../assets/styles/mixins" as mixin;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 100px 0px;
+  width: 100%;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+
+    h2 {
+      font-size: 48px;
+      font-weight: normal;
+    }
+
+    .contenu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 50px;
+
+      a {
+        background-color: black;
+        border: 1px solid white;
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        padding: 6px 20px;
+        width: 400px;
+        height: 70px;
+        font-size: 40px;
+        font-family: var(--font-family);
+
+        @include mixin.xs {
+          width: 250px;
+          height: 50px;
+          font-size: 24px;
+          gap: 60px;
+        }
+      }
+
+      .tel {
+        gap: 70px;
+        cursor: default;
+        font-size: 32px;
+
+        @include mixin.xs {
+          gap: 40px;
+          font-size: 20px;
+        }
+      }
+    }
+
+    iframe {
+      width: 700px;
+      height: 550px;
+      border: 0;
+
+      @include mixin.sm-lt {
+        width: 90%;
+      }
+
+      @include mixin.xs {
+        height: 400px;
+      }
+    }
+
+    .horaires {
+      background-image: url(../../assets/img/horaires.jpg);
+      background-size: cover;
+      width: 450px;
+      height: 550px;
+
+      @include mixin.xs {
+        width: 350px;
+        height: 400px;
+      }
+    }
+  }
+}
