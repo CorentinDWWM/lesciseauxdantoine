@@ -108,7 +108,7 @@ export default function Mentions_Legales() {
       <div>
         <h2>Création du site :</h2>
         <p>
-          Site réalisé par <strong>Delaforge Corentin</strong>,
+          Site réalisé par <strong>Delaforge Corentin</strong>,{" "}
           <strong>delaforgecorentin62@gmail.com</strong>.
         </p>
       </div>

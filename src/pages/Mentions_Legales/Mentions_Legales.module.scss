@@ -4,9 +4,14 @@
   margin: 50px 0px 50px 100px;
   width: 80%;
 
+  @include mixin.xs {
+    width: 60%;
+  }
+
   h1 {
     font-size: 48px;
     margin-bottom: 50px;
+    width: 80%;
 
     @include mixin.sm-lt {
       font-size: 42px;
