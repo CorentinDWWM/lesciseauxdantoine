@@ -1,18 +1,49 @@
+@use "../../assets/styles/mixins" as mixin;
+
 .ml {
   margin: 50px 0px 50px 100px;
   width: 80%;
+
   h1 {
     font-size: 48px;
     margin-bottom: 50px;
+
+    @include mixin.sm-lt {
+      font-size: 42px;
+    }
+
+    @include mixin.xs {
+      font-size: 32px;
+    }
+  }
+
+  div {
+    width: 80%;
   }
 
   h2 {
     font-size: 38px;
     margin-bottom: 20px;
+
+    @include mixin.sm-lt {
+      font-size: 32px;
+    }
+
+    @include mixin.xs {
+      font-size: 24px;
+    }
   }
 
   p {
     font-size: 24px;
     margin: 0;
+
+    @include mixin.sm-lt {
+      font-size: 20px;
+    }
+
+    @include mixin.xs {
+      font-size: 18px;
+    }
   }
 }
